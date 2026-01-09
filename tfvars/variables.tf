@@ -1,11 +1,11 @@
 variable "instance_names" {
-    type = map
-    # default = {
-    #     mysql = "t3.small"
-    #     backend = "t3.micro"
-    #     frontend = "t3.micro"
+  type = map(any)
+  # default = {
+  #     mysql = "t3.small"
+  #     backend = "t3.micro"
+  #     frontend = "t3.micro"
 
-    # }
+  # }
 }
 
 variable "domain_name" {
@@ -18,16 +18,16 @@ variable "zone_id" {
 }
 
 variable "common_tags" {
-    default ={
-        Project = "expense"
-        Terraform = "true"
-    }
+  default = {
+    Project   = "expense"
+    Terraform = "true"
+  }
 }
 
 variable "tags" {
-    type = map
+  type = map(any)
 }
 
 variable "environment" {
- 
+
 }
